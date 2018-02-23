@@ -11,8 +11,8 @@ public class TresNRaya {
 	
 	//botonx botony almacena las coordenadas de la casilla destino
 	public int destinox,destinoy;
-	//Cuando mover est� a true significa que la pieza seleccionada es para mover
-	//Si est� a false la casilla seleccionada no est
+	//Cuando mover est�ｿｽ a true significa que la pieza seleccionada es para mover
+	//Si est�ｿｽ a false la casilla seleccionada no est
 	public boolean mover=true;	
 	/**
 	 * Comprueba si la casilla destino es contigua a la casilla origen
@@ -49,7 +49,7 @@ public class TresNRaya {
 	
 	/** casilla libre adyacente libre
 	 * @return true si encuentra al menos una casilla libre contigua
-	 * false si la pieza est� bloqueada
+	 * false si la pieza est�ｿｽ bloqueada
 	 */
 	private boolean comprobarBloqueada(){
 		for (int x=destinox-1;x<=destinox+1;x++)
@@ -61,7 +61,7 @@ public class TresNRaya {
 	}
 	
 	/**Si en la casilla determinada por las coordenadas x e y se encuentra con un cero
-	 * seignifica que la casilla est� libre
+	 * seignifica que la casilla est�ｿｽ libre
 	 * @param coordenada de fila
 	 * @param coordenada de columna
 	 * @return verdadero si la casilla esta libre y falso en caso contrario
@@ -78,7 +78,7 @@ public class TresNRaya {
 	 */
 
 	public boolean realizarJugada(){
-		//Turno sirve para conocer a quien le correponde el turno de jugada y as� colocar 
+		//Turno sirve para conocer a quien le correponde el turno de jugada y as�ｿｽ colocar 
 		//la ficha correcta
 		//Si la jugada es la sexta debemos mover. la variable mover controla que se haya metido la casilla origen
 		if (numerojugada>6){
@@ -143,13 +143,13 @@ public class TresNRaya {
 	}
 	/**
 	 * Comprueba si alguna diagonal tiene tres en raya
-	 * No hace falta comparar si est�n vacias, no puede ocurrir
+	 * No hace falta comparar si est�ｿｽn vacias, no puede ocurrir
 	 * @return  true si se da la circunstancia
 	 */
 	private boolean compruebaDiagonal(){
-		if (tablero[0][0]==tablero[1][1]&&tablero[1][1]==tablero[2][2])
+		if (tablero[0][0]==tablero[1][1]&&tablero[1][1]==tablero[2][2] && tablero[1][1]!=0)
 			return true;
-		if (tablero[0][2]==tablero[1][1]&&tablero[1][1]==tablero[2][0])
+		if (tablero[0][2]==tablero[1][1]&&tablero[1][1]==tablero[2][0] && tablero[1][1]!=0)
 			return true;
 		return false;
 	}
@@ -171,7 +171,7 @@ public class TresNRaya {
 		switch(numero){
 		case 0:return ' ';
 		case 1:return 'O';
-		case 2:return 'X';
+		case 2:return 'X';	
 		}
 		return ' ';
 	}
@@ -190,7 +190,7 @@ public class TresNRaya {
 	}
 	public String indicarAnomalia(){
 		if (numerojugada<=6){		
-			if (!mirarCasillaLibre())return "La casilla no est� libre";
+			if (!mirarCasillaLibre())return "La casilla no est�ｿｽ libre";
 		}
 		else {
 			if (mover){				
@@ -198,7 +198,7 @@ public class TresNRaya {
 				if (!comprobarBloqueada())return "La pieza seleccionada esta bloqueada";
 			}//if
 			else {
-				if (!mirarCasillaLibre())return "La casilla no est� libre";
+				if (!mirarCasillaLibre())return "La casilla no est�ｿｽ libre";
 				if (!casillaContigua()) return "Casilla no contigua";
 				
 			}//else

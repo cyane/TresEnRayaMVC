@@ -7,16 +7,19 @@ import javax.swing.JButton;
 
 public class MyActionListener implements ActionListener {
 
-	TresNRaya control;
+	private TresNRaya control;
+	private ParaTresNRayaUI paraTresNRayaUI;
 	
-	public MyActionListener(TresNRaya control) {
+	public MyActionListener(TresNRaya control,ParaTresNRayaUI paraTresNRayaUI) {
 		super();
 		this.control = control;
+		this.paraTresNRayaUI=paraTresNRayaUI;
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		((JButton)e.getSource()).setText("d");
+		paraTresNRayaUI.pseudoMain(((JButton)e.getSource()).getName());
 	}
+	
 
 }
