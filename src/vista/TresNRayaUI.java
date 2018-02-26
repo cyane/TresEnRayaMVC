@@ -184,6 +184,7 @@ public class TresNRayaUI extends JFrame {
 		txtGanador.setColumns(10);
 		
 		btnReboot = new JButton("Reiniciar");
+		btnReboot.setName("btnReboot");
 		GridBagConstraints gbc_btnReboot = new GridBagConstraints();
 		gbc_btnReboot.fill = GridBagConstraints.BOTH;
 		gbc_btnReboot.insets = new Insets(0, 0, 0, 5);
@@ -192,6 +193,7 @@ public class TresNRayaUI extends JFrame {
 		panelPostGame.add(btnReboot, gbc_btnReboot);
 		
 		btnCerrar = new JButton("Cerrar");
+		btnCerrar.setName("btnCerrar");
 		GridBagConstraints gbc_btnCerrar = new GridBagConstraints();
 		gbc_btnCerrar.fill = GridBagConstraints.BOTH;
 		gbc_btnCerrar.gridx = 1;

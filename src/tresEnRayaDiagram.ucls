@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="vista.Botonera" project="TresEnRayaMVC" 
     file="/TresEnRayaMVC/src/vista/Botonera.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="497" y="108"/>    
+    <position height="-1" width="-1" x="519" y="122"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="controlador.ParaTresNRayaUI" project="TresEnRayaMVC" 
     file="/TresEnRayaMVC/src/controlador/ParaTresNRayaUI.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="517" y="283"/>    
+    <position height="-1" width="-1" x="554" y="353"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="controlador.Principal" project="TresEnRayaMVC" 
     file="/TresEnRayaMVC/src/controlador/Principal.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="133" y="275"/>    
+    <position height="-1" width="-1" x="169" y="367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -55,36 +55,36 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="7">    
+  <generalization id="7">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="8">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="9" name="botonera">        
+        <position height="0" width="0" x="-102" y="43"/>      
+      </attribute>      
+      <multiplicity id="10" minimum="0" maximum="1">        
+        <position height="0" width="0" x="-102" y="43"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="11">    
     <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="8" name="listener">        
+      <attribute id="12" name="listener">        
         <position height="0" width="0" x="155" y="134"/>      
       </attribute>      
-      <multiplicity id="9" minimum="0" maximum="1">        
+      <multiplicity id="13" minimum="0" maximum="1">        
         <position height="0" width="0" x="155" y="134"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="10">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="6"/>  
-  </generalization>  
-  <association id="11">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="12" name="control">        
-        <position height="0" width="0" x="34" y="-25"/>      
-      </attribute>      
-      <multiplicity id="13" minimum="0" maximum="1">        
-        <position height="0" width="0" x="34" y="-25"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="14">    
-    <end type="SOURCE" refId="4" navigable="false">      
+    <end type="SOURCE" refId="2" navigable="false">      
       <attribute id="15" name="control">        
         <position height="0" width="0" x="34" y="-25"/>      
       </attribute>      
@@ -95,19 +95,7 @@
     <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="17">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="18" name="botonera">        
-        <position height="0" width="0" x="-124" y="29"/>      
-      </attribute>      
-      <multiplicity id="19" minimum="0" maximum="1">        
-        <position height="0" width="0" x="-124" y="29"/>      
-      </multiplicity>    
-    </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <dependency id="20">    
+  <dependency id="17">    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="2"/>  
   </dependency>  

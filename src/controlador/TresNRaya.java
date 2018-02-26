@@ -190,7 +190,7 @@ public class TresNRaya {
 	}
 	public String indicarAnomalia(){
 		if (numerojugada<=6){		
-			if (!mirarCasillaLibre())return "La casilla no est�ｿｽ libre";
+			if (!mirarCasillaLibre())return "La casilla no esta libre";
 		}
 		else {
 			if (mover){				
@@ -198,7 +198,7 @@ public class TresNRaya {
 				if (!comprobarBloqueada())return "La pieza seleccionada esta bloqueada";
 			}//if
 			else {
-				if (!mirarCasillaLibre())return "La casilla no est�ｿｽ libre";
+				if (!mirarCasillaLibre())return "La casilla no esta libre";
 				if (!casillaContigua()) return "Casilla no contigua";
 				
 			}//else
